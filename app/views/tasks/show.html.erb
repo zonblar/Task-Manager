@@ -1,0 +1,9 @@
+<h1><%= @task.name %></h1>
+<p><%= @task.description %></p>
+<p><%= '*' * @task.importance %></p>
+<%if @task.done %>
+  <p>Congrats: you completed this task</p>
+<% else %>
+  <p>Mark as done ?</p>
+<% end %>
+<%= link_to "View all my tasks", tasks_path%>
